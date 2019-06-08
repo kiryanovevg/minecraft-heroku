@@ -19,7 +19,7 @@ graceful_shutdown(){
 	exit 0
 }
 
-echo 'sleeping 30s to wait for previous instance to terminate'
+echo 'sleeping 20s to wait for previous instance to terminate'
 sleep 20
 echo 'starting deployment'
 
@@ -71,5 +71,5 @@ node index.js &
 while true
 do
 	curl --silent 'https://eugene-mc-server.herokuapp.com/' &> /dev/null
-	sleep 1500
+	sleep 1000
 done
