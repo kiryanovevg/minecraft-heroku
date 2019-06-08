@@ -20,7 +20,7 @@ graceful_shutdown(){
 }
 
 echo 'sleeping 30s to wait for previous instance to terminate'
-sleep 30
+sleep 20
 echo 'starting deployment'
 
 mc_port=25565
@@ -70,6 +70,6 @@ node index.js &
 # curl the server every 25 min so it doesn't sleep
 while true
 do
-	curl --silent 'http://cs-mc-server.herokuapp.com/' &> /dev/null
+	curl --silent 'https://eugene-mc-server.herokuapp.com/' &> /dev/null
 	sleep 1500
 done
